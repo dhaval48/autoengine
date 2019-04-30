@@ -16,9 +16,29 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'created_by', 'locale'
     ];
 
+    public $formelements = [
+        'name' => '', 
+        'email' => '', 
+        'password' => '',
+        'password_confirmation' => '',
+        'role_id' => '',
+    ];
+
+    public $searchelements = [
+        'name',
+        'email'
+    ];
+
+    public function list_data() {
+        return  [
+            Lang::get('users.name') => "name",
+            Lang::get('users.email') => "email",
+        ];
+    }
+        
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -28,12 +48,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function roles()
+    {
+        return $this->belongsToMany('ongoingcloud\laravelcrud\Models\Role', 'user_roles', 'user_id', 'role_id');
+    }
+
+    public function file_upload() {
+        return $this->hasMany('ongoingcloud\laravelcrud\Models\FileUpload','user_id','id');
+    }
 }

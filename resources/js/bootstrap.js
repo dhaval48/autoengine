@@ -1,4 +1,4 @@
-import Form from './components/autoengine/core/Form';
+import Form from './components/core/Form';
 
 window._ = require('lodash');
 

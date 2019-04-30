@@ -19,9 +19,9 @@ window.Vue = require('vue');
 
 require('./component');
 
-Vue.component('paginate-links',require('./components/autoengine/common/paginate_link.vue').default);
-Vue.component('dropdown',require('./components/autoengine/common/dropdown.vue').default);
-Vue.component('activity',require('./components/autoengine/common/activity.vue').default);
+Vue.component('paginate-links',require('./components/common/paginate_link.vue').default);
+Vue.component('dropdown',require('./components/common/dropdown.vue').default);
+Vue.component('activity',require('./components/common/activity.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -36,7 +36,7 @@ Vue.use(Toasted)
 import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2);
 
-import filter from './components/autoengine/core/filter';
+import filter from './components/core/filter';
 Vue.use(filter);
 
 import vSelect from 'vue-select';
@@ -45,16 +45,16 @@ Vue.component('v-select', vSelect)
 import Datepicker from 'vuejs-datepicker';
 Vue.component('Datepicker', Datepicker)
 
-import activity from './components/autoengine/common/activity.vue';
+import activity from './components/common/activity.vue';
 Vue.component('activity', activity)
 
-import grid from './components/autoengine/common/grid.vue';
+import grid from './components/common/grid.vue';
 Vue.component('grid', grid)
 
-import auto_grid from './components/autoengine/common/auto_grid.vue';
+import auto_grid from './components/common/auto_grid.vue';
 Vue.component('auto_grid', auto_grid)
 
-import file_upload from './components/autoengine/common/file_upload.vue';
+import file_upload from './components/common/file_upload.vue';
 Vue.component('file_upload', file_upload)
 
 import PrettyCheckbox from 'pretty-checkbox-vue'; 

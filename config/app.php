@@ -175,7 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        autoengine\crudpack\CrudpackServiceProvider::class,
+        ongoingcloud\laravelcrud\LaravelCrudServiceProvider::class,
 
     ],
 

@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "autoengine\\crudpack\\": "packages/autoengine/crudpack/src",
+            "ongoingcloud\\laravelcrud\\": "packages/ongoingcloud/laravelcrud/src",
             "App\\": "app/"
         },
         "classmap": [
@@ -46,7 +46,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "autoengine\\crudpack\\": "packages/autoengine/crudpack/src",
+            "ongoingcloud\\laravelcrud\\": "packages/ongoingcloud/laravelcrud/src",
             "Tests\\": "tests/"
         }
     },
