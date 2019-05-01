@@ -7,14 +7,14 @@
           <input type="email" name="email" class="form-control" placeholder="Email" v-model="form.email">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 
-          <span id='email-error' class='help-block' 
+          <span id='email-error' class='help-block text-danger' 
             v-if='form.errors.has("email")'
             v-text='form.errors.get("email")'></span>
         </div>
         <div :class='form.errors.has("password")?"form-group has-feedback has-error":"form-group has-feedback"'>
           <input type="password" name="password" class="form-control" placeholder="Password" v-model="form.password">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          <span id='password-error' class='help-block' 
+          <span id='password-error' class='help-block text-danger' 
             v-if='form.errors.has("password")'
             v-text='form.errors.get("password")'></span>            
         </div>

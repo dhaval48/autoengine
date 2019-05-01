@@ -50,10 +50,10 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany('ongoingcloud\laravelcrud\Models\Role', 'user_roles', 'user_id', 'role_id');
+        return $this->belongsToMany('Ongoingcloud\Laravelcrud\Models\Role', 'user_roles', 'user_id', 'role_id');
     }
 
     public function file_upload() {
-        return $this->hasMany('ongoingcloud\laravelcrud\Models\FileUpload','user_id','id');
+        return $this->hasMany('Ongoingcloud\Laravelcrud\Models\FileUpload','user_id','id');
     }
 }

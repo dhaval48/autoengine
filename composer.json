@@ -9,9 +9,14 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "barryvdh/laravel-dompdf": "^0.8.4",
+        "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
+        "laravel/dusk": "^5.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/passport": "^7.2",
+        "laravel/tinker": "^1.0",
+        "phpoffice/phpspreadsheet": "^1.6"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -33,20 +38,17 @@
     },
     "autoload": {
         "psr-4": {
-            "ongoingcloud\\laravelcrud\\": "packages/ongoingcloud/laravelcrud/src",
+            "Ongoingcloud\\Laravelcrud\\": "packages/ongoingcloud/laravelcrud/src",
             "App\\": "app/"
         },
         "classmap": [
             "database/seeds",
             "database/factories"
-        ],
-        "files": [
-            "app/helpers.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "ongoingcloud\\laravelcrud\\": "packages/ongoingcloud/laravelcrud/src",
+            "Ongoingcloud\\Laravelcrud\\": "packages/ongoingcloud/laravelcrud/src",
             "Tests\\": "tests/"
         }
     },

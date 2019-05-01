@@ -1,39 +1,23 @@
-@extends('backend.layouts.app')
-
-@section('after-styles')
-
-@endsection
+@extends('layouts.app')
 
 @section('content')
-
-<div id="content">
+<div class="container">
     <section>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <a href="{{ route($data['list_route']) }}"> 
-                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                        </a>&nbsp;&nbsp;
-                        <h3 class="box-title">{{ $data['lang']['change_password'] }}</h3>
-                        
+        <div class="row justify-content-center">
+            <div class="col-md-12 mtop-10">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-title h4" href="{{ $data['list_route'] }}"> 
+                            {{ $data['lang']['change_password'] }}
+                        </a>
                     </div>
 
-                    <div class="box-body"> 
+                    <div class="card-body"> 
                         <changepassword-view :module="{{json_encode($data)}}"></changepassword-view>
                     </div>
                 </div>
             </div>
         </div>            
     </section>
-</div><!--end #content-->     
-@endsection
-
-@section('after-scripts')
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    
-  });
-</script>
+</div> 
 @endsection
