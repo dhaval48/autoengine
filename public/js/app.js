@@ -59190,7 +59190,7 @@ var render = function() {
               _vm._v(" "),
               _vm.form.errors.has("email")
                 ? _c("span", {
-                    staticClass: "help-block",
+                    staticClass: "help-block text-danger",
                     attrs: { id: "email-error" },
                     domProps: {
                       textContent: _vm._s(_vm.form.errors.get("email"))
@@ -59240,7 +59240,7 @@ var render = function() {
               _vm._v(" "),
               _vm.form.errors.has("password")
                 ? _c("span", {
-                    staticClass: "help-block",
+                    staticClass: "help-block text-danger",
                     attrs: { id: "password-error" },
                     domProps: {
                       textContent: _vm._s(_vm.form.errors.get("password"))
@@ -65024,7 +65024,7 @@ var render = function() {
         _vm._v(" "),
         _c("input", {
           ref: "files",
-          staticClass: "hide",
+          staticClass: "hide d-none",
           attrs: { type: "file", id: "files", multiple: "" },
           on: {
             change: function($event) {
