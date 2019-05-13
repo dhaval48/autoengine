@@ -46,7 +46,7 @@
                             <label for="Confirmpassword">{{this.module.lang.confirm_password}}</label>
 
                             <input type="password" name="password_confirmation" class="form-control" v-model="form.password_confirmation">
-                            <span id="Firstname1-error" class="help-block" v-if="form.errors.has('password_confirmation')" v-text="form.errors.get('password_confirmation')"></span>
+                            <span id="Firstname1-error" class="help-block text-danger" v-if="form.errors.has('password_confirmation')" v-text="form.errors.get('password_confirmation')"></span>
                         </div>
                     </div>
         		</div>

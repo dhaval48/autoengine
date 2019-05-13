@@ -6,7 +6,7 @@
             <div class="col-sm-8">
                 <div :class='form.errors.has("current_password")?"form-group has-error":"form-group"'>
                     <input type="password" class="form-control" id="current_password" name="current_password" placeholder="Password" v-model="form.current_password">
-                    <span id='current_password-error' class='help-block text-danger' 
+                    <span id='current_password-error' class='help-block' text-danger 
                         v-if='form.errors.has("current_password")'
                         v-text='form.errors.get("current_password")'></span>
                 </div>
